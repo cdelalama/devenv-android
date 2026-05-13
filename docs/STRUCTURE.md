@@ -1,8 +1,8 @@
-<!-- doc-version: 0.2.1 -->
+<!-- doc-version: 0.2.2 -->
 # Repository Structure
 
 ```
-termux-client/
+devenv-android/
 +- README.md
 +- VERSION
 +- CHANGELOG.md

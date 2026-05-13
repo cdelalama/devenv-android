@@ -1,9 +1,9 @@
-# Architectural Decisions - termux-client
+# Architectural Decisions - devenv-android
 
-## D-001: termux-client is a client layer, not the workspace authority
+## D-001: devenv-android is a client layer, not the workspace authority
 
 - **Status**: accepted
-- **Decision**: Treat `termux-client` as the Android/mobile entry layer for the
+- **Decision**: Treat `devenv-android` as the Android/mobile entry layer for the
   wider `devenv` stack, not as the owner of project-workspace semantics.
 - **Context**: The core workspace semantics live in `tmux-workspace` / `devenv`.
   This repo historically triggered a parallel `proj_*` flow. That was drift, not
@@ -41,10 +41,10 @@
   canonical `~/src` remote root, and `newproj` can remain bootstrap-only
   without owning tmux behavior.
 
-## D-004: keep `termux-client` Termux-only
+## D-004: keep `devenv-android` Termux-only
 
 - **Status**: accepted
-- **Decision**: Treat `termux-client` as a Termux/Android client only. Do not
+- **Decision**: Treat `devenv-android` as a Termux/Android client only. Do not
   support the repo as a generic desktop or local-shell launcher.
 - **Context**: Local modifications had introduced dual-mode behavior where
   `op`, `np`, and `install.sh` could also run outside Termux. That behavior was
@@ -52,7 +52,7 @@
   boundaries.
 - **Rationale**: The stack already has supported non-Android entry paths:
   plain SSH for the general `ssh-*` menu and `tmux-workspace` desktop clients
-  for convenience. Reusing `termux-client` outside Termux would blur the
+  for convenience. Reusing `devenv-android` outside Termux would blur the
   product boundary again.
 - **Implications**: `op`, `np`, and `install.sh` must fail clearly outside
   Termux; docs must point desktop users to `tmux-workspace` or plain SSH; future

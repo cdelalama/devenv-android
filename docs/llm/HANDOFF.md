@@ -1,15 +1,15 @@
-<!-- doc-version: 0.2.1 -->
-# Handoff - termux-client
+<!-- doc-version: 0.2.2 -->
+# Handoff - devenv-android
 
 ## Current Status
 
-- **Last updated**: 2026-03-19 - GPT-5 Codex
-- **Focus**: Close the remaining termux-client contract drift by making the repo explicitly Termux-only
-- **Status**: v0.2.1 on `main`
+- **Last updated**: 2026-05-13 - Claude Opus 4.7 (1M context)
+- **Focus**: Repo renamed from `termux-client` to `devenv-android` as part of the devenv-stack rebrand (see `~/src/home-infra/docs/DEVENV_STACK.md`)
+- **Status**: v0.2.2 on `main`
 
 ## Immediate Context
 
-`termux-client` remains the Android entry layer for `dev-vm`.
+`devenv-android` remains the Android entry layer for `dev-vm`.
 The main project-entry drift was reduced in the previous slice, and the remaining
 runtime-boundary drift is closed here.
 
@@ -48,7 +48,7 @@ core owner of workspace semantics.
 
 ## Current Version
 
-- **termux-client**: 0.2.1
+- **devenv-android**: 0.2.1
 
 ## Top Priorities
 
@@ -59,15 +59,15 @@ core owner of workspace semantics.
 
 ## Key Decisions
 
-- D-001: `termux-client` is a client layer, not the owner of workspace semantics
+- D-001: `devenv-android` is a client layer, not the owner of workspace semantics
 - D-002: establish governance before changing the mobile workflow
 - D-003: use `newproj` for repo/bootstrap work, but `devenv` for workspace entry
-- D-004: `termux-client` is Termux-only; desktop/local-shell use belongs elsewhere
+- D-004: `devenv-android` is Termux-only; desktop/local-shell use belongs elsewhere
 
 ## Do Not Touch
 
 - The new `devenv`-based entry flow without coordinating docs/bootstrap changes
-- Host/config conventions in `~/.config/termux-client/config` without checking
+- Host/config conventions in `~/.config/devenv-android/config` without checking
   docs and bootstrap implications
 - The Termux-only runtime boundary unless the product scope is explicitly widened
 

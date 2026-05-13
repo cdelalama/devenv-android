@@ -2,7 +2,7 @@
 set -euo pipefail
 
 if [[ ! -d "/data/data/com.termux" ]]; then
-  echo "Error: termux-client/np is supported only inside Termux on Android." >&2
+  echo "Error: devenv-android/np is supported only inside Termux on Android." >&2
   echo "Use newproj and devenv directly on the host, or use the desktop client." >&2
   exit 2
 fi

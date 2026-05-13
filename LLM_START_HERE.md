@@ -1,5 +1,5 @@
-<!-- doc-version: 0.2.1 -->
-# LLM Start Guide - termux-client
+<!-- doc-version: 0.2.2 -->
+# LLM Start Guide - devenv-android
 
 ## Read This First
 

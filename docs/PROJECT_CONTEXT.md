@@ -1,5 +1,5 @@
-<!-- doc-version: 0.2.1 -->
-# Project Context - termux-client
+<!-- doc-version: 0.2.2 -->
+# Project Context - devenv-android
 
 ## Vision
 
@@ -9,7 +9,7 @@ This product is specifically the Termux/Android client path.
 
 ## Product Role
 
-`termux-client` is not the workspace manager itself.
+`devenv-android` is not the workspace manager itself.
 It is the Android/Termux entry layer for the wider `devenv` stack.
 
 Its responsibilities are:

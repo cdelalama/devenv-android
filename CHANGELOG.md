@@ -1,3 +1,14 @@
+## [0.2.2] - 2026-05-13
+
+### Added
+
+### Changed
+
+- Repo renamed from `termux-client` to `devenv-android` as part of the devenv-stack rebrand (canonical doc: `~/src/home-infra/docs/DEVENV_STACK.md`). Internal references updated to the new name. `~/.config/termux-client/config` and `~/.cache/termux-client/` paths preserved for compatibility with existing Termux installs; migration of config paths to the new name is deferred to a follow-up release.
+- Error messages now identify the binary as `devenv-android/op`, `devenv-android/np`, etc.
+
+### Fixed
+
 ## [0.2.1] - 2026-03-19
 
 ### Added
@@ -10,7 +21,7 @@
 
 ### Fixed
 
-- Closed the remaining product-boundary drift where `termux-client` still behaved like an undocumented second desktop/local-shell client
+- Closed the remaining product-boundary drift where `devenv-android` still behaved like an undocumented second desktop/local-shell client
 
 ## [0.2.0] - 2026-03-18
 
@@ -38,7 +49,7 @@
 
 ### Changed
 
-- Established `termux-client` as a governed client-layer repo in the wider
+- Established `devenv-android` as a governed client-layer repo in the wider
   `devenv` stack
 
 ### Fixed

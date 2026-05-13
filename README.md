@@ -1,5 +1,5 @@
-<!-- doc-version: 0.2.1 -->
-# termux-client
+<!-- doc-version: 0.2.2 -->
+# devenv-android
 
 Android Termux client wrappers to drive the dev VM.
 
@@ -52,16 +52,16 @@ This repo is public, but on the phone we use Git over SSH (no HTTPS tokens):
 
     pkg install -y git openssh coreutils fzf
     cd ~
-    rm -rf termux-client
-    git clone git@github.com:cdelalama/termux-client.git
-    cd termux-client
+    rm -rf devenv-android
+    git clone git@github.com:cdelalama/devenv-android.git
+    cd devenv-android
     ./install.sh
 
 SSH auth requirement:
 - ensure ~/.ssh/id_ed25519.pub is added in GitHub -> Settings -> SSH and GPG keys
 
 Config file:
-- ~/.config/termux-client/config
+- ~/.config/devenv-android/config
 
 Optional defaults:
 - DEFAULT_FOLDER: folder to open when running `vscode-web` without args (if unset, code-server may open last folder)
@@ -79,9 +79,9 @@ Install these apps first:
 ### 1) One-liner (Termux)
 
     pkg install -y git openssh coreutils fzf && \
-    cd ~ && rm -rf termux-client && \
-    git clone https://github.com/cdelalama/termux-client.git && \
-    cd termux-client && \
+    cd ~ && rm -rf devenv-android && \
+    git clone https://github.com/cdelalama/devenv-android.git && \
+    cd devenv-android && \
     ./install.sh && \
     bootstrap-phone
 
@@ -98,7 +98,7 @@ C) Network:
 
 ### 3) Configure host (Termux)
 Edit:
-- ~/.config/termux-client/config
+- ~/.config/devenv-android/config
 
 Set:
 - HOST=cdelalama@10.0.0.110 (or your dev-vm IP)
@@ -161,7 +161,7 @@ Run: doctor-phone
 - Your repo remote is HTTPS.
 - Fix:
 
-    git remote set-url origin git@github.com:cdelalama/termux-client.git
+    git remote set-url origin git@github.com:cdelalama/devenv-android.git
     ssh -T git@github.com
 
 ### Permission denied (publickey) when pushing to GitHub

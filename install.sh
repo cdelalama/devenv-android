@@ -2,14 +2,14 @@
 set -euo pipefail
 
 if [[ ! -d "/data/data/com.termux" ]]; then
-  echo "Error: termux-client/install.sh is supported only inside Termux on Android." >&2
+  echo "Error: devenv-android/install.sh is supported only inside Termux on Android." >&2
   echo "Use tmux-workspace client scripts or plain SSH on desktop/server environments." >&2
   exit 2
 fi
 
 PREFIX="${PREFIX:-/data/data/com.termux/files/usr}"
 
-CFG_DIR="$HOME/.config/termux-client"
+CFG_DIR="$HOME/.config/devenv-android"
 CFG_FILE="$CFG_DIR/config"
 
 mkdir -p "$CFG_DIR"

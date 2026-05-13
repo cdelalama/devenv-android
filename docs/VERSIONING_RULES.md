@@ -1,5 +1,5 @@
-<!-- doc-version: 0.2.1 -->
-# Versioning Rules - termux-client
+<!-- doc-version: 0.2.2 -->
+# Versioning Rules - devenv-android
 
 ## Version Format
 

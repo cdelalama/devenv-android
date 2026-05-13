@@ -2,7 +2,7 @@
 set -euo pipefail
 
 if [[ ! -d "/data/data/com.termux" ]]; then
-  echo "Error: termux-client/op is supported only inside Termux on Android." >&2
+  echo "Error: devenv-android/op is supported only inside Termux on Android." >&2
   echo "Use plain SSH or the tmux-workspace desktop client on non-Termux machines." >&2
   exit 2
 fi
