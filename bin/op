@@ -3,12 +3,15 @@ set -euo pipefail
 
 if [[ ! -d "/data/data/com.termux" ]]; then
   echo "Error: devenv-android/op is supported only inside Termux on Android." >&2
-  echo "Use plain SSH or the tmux-workspace desktop client on non-Termux machines." >&2
+  echo "Use plain SSH or the devenv desktop client on non-Termux machines." >&2
   exit 2
 fi
 
 WORKSPACE="${WORKSPACE_ROOT_REMOTE:-$HOME/src}"
-CFG_FILE="$HOME/.config/termux-client/config"
+CFG_FILE="${DEVENV_ANDROID_CONFIG:-$HOME/.config/devenv-android/config}"
+if [[ ! -f "$CFG_FILE" && -f "$HOME/.config/termux-client/config" ]]; then
+  CFG_FILE="$HOME/.config/termux-client/config"
+fi
 # shellcheck disable=SC1090
 source "$CFG_FILE"
 

@@ -1,7 +1,10 @@
 #!/data/data/com.termux/files/usr/bin/bash
 set -euo pipefail
 
-CFG="$HOME/.config/termux-client/config"
+CFG="${DEVENV_ANDROID_CONFIG:-$HOME/.config/devenv-android/config}"
+if [[ ! -f "$CFG" && -f "$HOME/.config/termux-client/config" ]]; then
+  CFG="$HOME/.config/termux-client/config"
+fi
 fail=0
 
 say_ok(){ echo "OK  $*"; }

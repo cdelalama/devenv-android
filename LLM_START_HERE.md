@@ -1,4 +1,4 @@
-<!-- doc-version: 0.2.3 -->
+<!-- doc-version: 0.2.4 -->
 # LLM Start Guide - devenv-android
 
 ## Read This First
@@ -38,7 +38,7 @@ Source of truth: `docs/llm/HANDOFF.md`.
 
 - Last Updated: 2026-05-13 - GPT-5 Codex
 - Working on: keep the Android client boundary explicit after the devenv-stack rebrand
-- Status: v0.2.3; `op` and `np` enter work through `devenv`, and the supported runtime is Termux on Android
+- Status: v0.2.4; `op` and `np` enter work through `devenv`, and runtime commands prefer `~/.config/devenv-android/config` with legacy fallback
 
 ## Current Risk To Keep In Mind
 

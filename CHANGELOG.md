@@ -1,3 +1,26 @@
+## [0.2.4] - 2026-05-13
+
+### Added
+
+### Changed
+
+### Fixed
+
+## [0.2.4] - 2026-05-13
+
+### Added
+
+### Changed
+
+- `op`, `np`, `doctor-phone`, `bootstrap-phone`, and `vscode-web` now prefer `~/.config/devenv-android/config`, matching `install.sh`.
+- `install.sh` copies an existing legacy `~/.config/termux-client/config` into the new config path on first run.
+- `vscode-web` now prefers `~/.cache/devenv-android/vscode-tunnel.pid` while preserving fallback to the legacy tunnel pid file.
+
+### Fixed
+
+- Fixed the post-rebrand config-path mismatch where a fresh install created `~/.config/devenv-android/config` but runtime commands still loaded `~/.config/termux-client/config`.
+- Fixed the non-Termux installer guidance to point desktop users at `devenv` instead of the old `tmux-workspace` name.
+
 ## [0.2.3] - 2026-05-13
 
 ### Added

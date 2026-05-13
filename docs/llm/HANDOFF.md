@@ -1,11 +1,11 @@
-<!-- doc-version: 0.2.3 -->
+<!-- doc-version: 0.2.4 -->
 # Handoff - devenv-android
 
 ## Current Status
 
 - **Last updated**: 2026-05-13 - Claude Opus 4.7 (1M context)
-- **Focus**: Repo renamed from `termux-client` to `devenv-android` + D-005 records membership in the devenv-stack
-- **Status**: v0.2.3 on `main`
+- **Focus**: Fixed the post-rebrand config-path mismatch so runtime commands use the new `devenv-android` config path with legacy fallback.
+- **Status**: v0.2.4 on `main`
 
 ## Immediate Context
 
@@ -24,6 +24,10 @@ What changed:
 
 This keeps repo creation in `devenv-bootstrap` while moving workspace entry back to the
 core owner of workspace semantics.
+
+Post-rebrand cleanup now also aligns config paths: `install.sh` creates
+`~/.config/devenv-android/config`, and runtime commands prefer that path while
+falling back to `~/.config/termux-client/config` for existing installs.
 
 ## Active Files
 
@@ -44,11 +48,12 @@ core owner of workspace semantics.
 | `bin/op` | Modified - Termux-only wrapper for project selection and `devenv open` |
 | `bin/np` | Modified - Termux-only wrapper for repo bootstrap then `devenv open` |
 | `bin/bootstrap-phone` | Modified - now seeds `~/src` and describes `devenv`-based mobile entry |
-| `install.sh` | Modified - Termux-only installer with explicit failure on unsupported environments |
+| `bin/doctor-phone`, `bin/vscode-web` | Modified - prefer new `devenv-android` config/cache paths with legacy fallback |
+| `install.sh` | Modified - Termux-only installer with explicit failure on unsupported environments and legacy config migration |
 
 ## Current Version
 
-- **devenv-android**: 0.2.3
+- **devenv-android**: 0.2.4
 
 ## Top Priorities
 
@@ -68,8 +73,8 @@ core owner of workspace semantics.
 ## Do Not Touch
 
 - The new `devenv`-based entry flow without coordinating docs/bootstrap changes
-- Host/config conventions in `~/.config/devenv-android/config` without checking
-  docs and bootstrap implications
+- Host/config conventions in `~/.config/devenv-android/config` and the legacy
+  `~/.config/termux-client/config` fallback without checking docs and bootstrap implications
 - The Termux-only runtime boundary unless the product scope is explicitly widened
 
 ## Open Questions
@@ -77,6 +82,8 @@ core owner of workspace semantics.
 - Should `op` / `np` keep opening `code-server` automatically, or should project entry and browser entry become separate choices?
 
 ## Testing Notes
+
+- v0.2.4 validation: `scripts/check-version-sync.sh` passes for 0.2.4; shell syntax passes for `bin/op`, `bin/np`, `bin/bootstrap-phone`, `bin/doctor-phone`, `bin/vscode-web`, and `install.sh`. Real Android smoke remains pending.
 
 - No automated tests exist yet
 - Syntax validated with `bash -n` for `bin/op`, `bin/np`, `bin/bootstrap-phone`, and `install.sh`

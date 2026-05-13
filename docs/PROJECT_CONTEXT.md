@@ -1,4 +1,4 @@
-<!-- doc-version: 0.2.3 -->
+<!-- doc-version: 0.2.4 -->
 # Project Context - devenv-android
 
 ## Vision
@@ -62,6 +62,7 @@ workflow assumptions rather than rebuilding workspace logic here.
 - Stack membership recorded in `v0.2.3`
 - Existing/open project flows now target the canonical `devenv` workspace interface
 - Supported runtime is now explicitly Termux on Android only
+- Runtime commands now prefer `~/.config/devenv-android/config`, with fallback to legacy `~/.config/termux-client/config` for existing installs
 - `op`, `np`, and `install.sh` now fail clearly outside Termux instead of behaving as an undocumented second client
 
 ## Upcoming Milestones

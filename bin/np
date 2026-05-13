@@ -10,7 +10,10 @@ fi
 read -r -p "Repo name: " NAME
 NAME="$(echo "$NAME" | tr '[:upper:]' '[:lower:]' | sed -E 's/[^a-z0-9 -]//g; s/[ ]+/-/g; s/^-+|-+$//g')"
 [[ -n "$NAME" ]] || { echo "Empty name"; exit 2; }
-CFG_FILE="$HOME/.config/termux-client/config"
+CFG_FILE="${DEVENV_ANDROID_CONFIG:-$HOME/.config/devenv-android/config}"
+if [[ ! -f "$CFG_FILE" && -f "$HOME/.config/termux-client/config" ]]; then
+  CFG_FILE="$HOME/.config/termux-client/config"
+fi
 # shellcheck disable=SC1090
 source "$CFG_FILE"
 
