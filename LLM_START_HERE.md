@@ -36,9 +36,9 @@ Recommended order:
 
 Source of truth: `docs/llm/HANDOFF.md`.
 
-- Last Updated: 2026-03-19 - GPT-5 Codex
-- Working on: keep the Android client boundary explicit and prevent local-shell drift
-- Status: v0.2.1; `op` and `np` enter work through `devenv`, and the supported runtime is Termux on Android
+- Last Updated: 2026-05-13 - GPT-5 Codex
+- Working on: keep the Android client boundary explicit after the devenv-stack rebrand
+- Status: v0.2.3; `op` and `np` enter work through `devenv`, and the supported runtime is Termux on Android
 
 ## Current Risk To Keep In Mind
 

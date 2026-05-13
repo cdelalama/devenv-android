@@ -54,10 +54,12 @@ workflow assumptions rather than rebuilding workspace logic here.
 | `bin/bootstrap-phone` | New-phone bootstrap helper |
 | `bin/doctor-phone` | Connectivity and environment diagnostics |
 
-## Current Status (2026-03-19)
+## Current Status (2026-05-13)
 
 - Governance baseline established at `v0.1.0`; first functional convergence slice shipped in `v0.2.0`
 - Runtime-boundary cleanup shipped in `v0.2.1`
+- Repo renamed from `termux-client` to `devenv-android` in `v0.2.2`
+- Stack membership recorded in `v0.2.3`
 - Existing/open project flows now target the canonical `devenv` workspace interface
 - Supported runtime is now explicitly Termux on Android only
 - `op`, `np`, and `install.sh` now fail clearly outside Termux instead of behaving as an undocumented second client
@@ -70,6 +72,7 @@ workflow assumptions rather than rebuilding workspace logic here.
 
 ## References
 
-- `~/src/tmux-workspace` - core project workspace manager
-- `~/src/ssh-session-menu` - SSH general-session entry layer
-- `~/src/home-infra/docs/DEVENV_STACK_MANIFEST.md` - stack source of truth
+- `~/src/devenv` - core project workspace manager
+- `~/src/devenv-entry` - SSH general-session entry layer
+- `~/src/devenv-bootstrap` - repo/bootstrap tooling (`newproj`)
+- `~/src/home-infra/docs/DEVENV_STACK.md` - stack source of truth

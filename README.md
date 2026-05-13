@@ -19,7 +19,7 @@ The repo is still a client layer. It does not own workspace semantics.
 It is also not the desktop/local-shell client. For non-Android use:
 
 - plain SSH for the general `ssh-*` entry path
-- `tmux-workspace/client/connect.sh` or `connect.ps1` for desktop convenience
+- `devenv/client/connect.sh` or `connect.ps1` for desktop convenience
 
 ## Architecture / topology
 
@@ -35,7 +35,7 @@ Template:
 - cdelalama/LLM-DocKit
 
 Server tool:
-- /usr/local/bin/newproj (installed from cdelalama/dev-tools)
+- /usr/local/bin/newproj (installed from cdelalama/devenv-bootstrap)
 
 Client tools:
 - np (create/bootstrap repo with newproj, then open canonical devenv workspace)
@@ -170,14 +170,14 @@ Run: doctor-phone
   - paste ~/.ssh/id_ed25519.pub
 
 ### newproj: command not found on dev-vm
-- Install server tooling on dev-vm from cdelalama/dev-tools so /usr/local/bin/newproj exists.
+- Install server tooling on dev-vm from cdelalama/devenv-bootstrap so /usr/local/bin/newproj exists.
 
 ### devenv: command not found on dev-vm
-- Install the core server tooling on dev-vm from cdelalama/tmux-workspace and run `./server/install.sh` so `~/.local/bin/devenv` exists.
+- Install the core server tooling on dev-vm from cdelalama/devenv and run `./server/install.sh` so `~/.local/bin/devenv` exists.
 
 ### I tried to use `op`, `np`, or `install.sh` outside Termux
 - That is no longer a supported mode.
-- Use plain SSH or the desktop client from `tmux-workspace` on non-Android machines.
+- Use plain SSH or the desktop client from `devenv` on non-Android machines.
 
 ### VS Code does not open
 - Ensure code-server is running on dev-vm and bound to localhost:

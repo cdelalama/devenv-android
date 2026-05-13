@@ -22,7 +22,7 @@ What changed:
 - `op`, `np`, and `install.sh` now fail clearly outside Termux instead of acting
   as an undocumented second client mode
 
-This keeps repo creation in `dev-tools` while moving workspace entry back to the
+This keeps repo creation in `devenv-bootstrap` while moving workspace entry back to the
 core owner of workspace semantics.
 
 ## Active Files
@@ -48,7 +48,7 @@ core owner of workspace semantics.
 
 ## Current Version
 
-- **devenv-android**: 0.2.1
+- **devenv-android**: 0.2.3
 
 ## Top Priorities
 
@@ -63,6 +63,7 @@ core owner of workspace semantics.
 - D-002: establish governance before changing the mobile workflow
 - D-003: use `newproj` for repo/bootstrap work, but `devenv` for workspace entry
 - D-004: `devenv-android` is Termux-only; desktop/local-shell use belongs elsewhere
+- D-005: `devenv-android` is the Android client layer of the devenv-stack
 
 ## Do Not Touch
 

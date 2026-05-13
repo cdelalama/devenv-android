@@ -5,6 +5,7 @@
 - D-005 in `docs/llm/DECISIONS.md` records this repo as the Android client layer of the devenv-stack (canonical doc: `~/src/home-infra/docs/DEVENV_STACK.md`) and part of ForgeOS's operator-toolbox ecosystem model.
 
 ### Changed
+- Cleaned remaining post-rebrand docs references from `tmux-workspace` / `dev-tools` to `devenv` / `devenv-bootstrap`.
 
 ### Fixed
 
@@ -26,7 +27,7 @@
 ### Changed
 
 - `op`, `np`, and `install.sh` are now explicitly supported only inside Termux on Android
-- README and working-memory docs now point desktop/local-shell users to plain SSH or the `tmux-workspace` desktop client
+- README and working-memory docs now point desktop/local-shell users to plain SSH or the `devenv` desktop client
 - Removed the leftover duplicated launch heading in the README
 
 ### Fixed

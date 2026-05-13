@@ -5,7 +5,7 @@
 - **Status**: accepted
 - **Decision**: Treat `devenv-android` as the Android/mobile entry layer for the
   wider `devenv` stack, not as the owner of project-workspace semantics.
-- **Context**: The core workspace semantics live in `tmux-workspace` / `devenv`.
+- **Context**: The core workspace semantics live in `devenv` (formerly `tmux-workspace`).
   This repo historically triggered a parallel `proj_*` flow. That was drift, not
   the desired long-term ownership model.
 - **Rationale**: Keeping workspace ownership in one place is the only way to
@@ -34,7 +34,7 @@
   `proj_*` tmux sessions, which made the Android client a second workspace
   manager next to the core `devenv` system.
 - **Rationale**: Repo/bootstrap work and workspace entry are different concerns.
-  `dev-tools` can keep owning repo creation while `tmux-workspace` / `devenv`
+  `devenv-bootstrap` can keep owning repo creation while `devenv`
   remains the only owner of project-workspace semantics.
 - **Implications**: `bin/op` and `bin/np` now target `devenv`, the canonical
   mobile session model becomes `dev_*`, `bootstrap-phone` now seeds the
@@ -51,11 +51,11 @@
   not part of the documented product and created renewed ambiguity about repo
   boundaries.
 - **Rationale**: The stack already has supported non-Android entry paths:
-  plain SSH for the general `ssh-*` menu and `tmux-workspace` desktop clients
+  plain SSH for the general `ssh-*` menu and `devenv` desktop clients
   for convenience. Reusing `devenv-android` outside Termux would blur the
   product boundary again.
 - **Implications**: `op`, `np`, and `install.sh` must fail clearly outside
-  Termux; docs must point desktop users to `tmux-workspace` or plain SSH; future
+  Termux; docs must point desktop users to `devenv` or plain SSH; future
   widening of scope would require an explicit new decision and docs update.
 
 ## D-005: devenv-android is the Android client layer of the devenv-stack
