@@ -1,11 +1,11 @@
-<!-- doc-version: 0.2.2 -->
+<!-- doc-version: 0.2.3 -->
 # Handoff - devenv-android
 
 ## Current Status
 
 - **Last updated**: 2026-05-13 - Claude Opus 4.7 (1M context)
-- **Focus**: Repo renamed from `termux-client` to `devenv-android` as part of the devenv-stack rebrand (see `~/src/home-infra/docs/DEVENV_STACK.md`)
-- **Status**: v0.2.2 on `main`
+- **Focus**: Repo renamed from `termux-client` to `devenv-android` + D-005 records membership in the devenv-stack
+- **Status**: v0.2.3 on `main`
 
 ## Immediate Context
 

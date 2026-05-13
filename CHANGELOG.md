@@ -1,3 +1,13 @@
+## [0.2.3] - 2026-05-13
+
+### Added
+
+- D-005 in `docs/llm/DECISIONS.md` records this repo as the Android client layer of the devenv-stack (canonical doc: `~/src/home-infra/docs/DEVENV_STACK.md`) and part of ForgeOS's operator-toolbox ecosystem model.
+
+### Changed
+
+### Fixed
+
 ## [0.2.2] - 2026-05-13
 
 ### Added

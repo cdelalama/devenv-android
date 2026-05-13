@@ -57,3 +57,14 @@
 - **Implications**: `op`, `np`, and `install.sh` must fail clearly outside
   Termux; docs must point desktop users to `tmux-workspace` or plain SSH; future
   widening of scope would require an explicit new decision and docs update.
+
+## D-005: devenv-android is the Android client layer of the devenv-stack
+
+- **Status**: accepted
+- **Decision**: Document this repo as the **Android client layer** of the devenv-stack registered in `~/src/home-infra/docs/DEVENV_STACK.md`. Scaffold by LLM-DocKit. Part of ForgeOS's operator-toolbox ecosystem model (ForgeOS D-008 layer model). The repo was renamed from `termux-client` to `devenv-android` on 2026-05-13 as part of the umbrella rebrand.
+- **Context**: Prior to 2026-05-13 the repo had no explicit decision recording its ecosystem membership. The devenv-stack rebrand consolidated 5 repos under a `devenv-*` umbrella with a canonical doc in home-infra; each repo's role is now declared in its own DECISIONS as well as in the canonical doc.
+- **Options Considered**:
+  1. **Record the relationship locally** - aligns with how the other devenv-stack repos document their role
+  2. **Rely only on the canonical doc in home-infra** - works for fresh sessions but loses local visibility for LLMs opening this repo without ecosystem context
+- **Rationale**: Option 1 gives a future session opening only this repo enough context to orient itself. Cross-references the canonical doc in home-infra without depending on cross-repo navigation.
+- **Implications**: Future ecosystem-level changes should update `~/src/home-infra/docs/DEVENV_STACK.md` (canonical) and may need to update this decision if the role shifts.
