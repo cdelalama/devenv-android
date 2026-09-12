@@ -1,3 +1,15 @@
+## [0.2.5] - 2026-09-12
+
+### Added
+- Central DocKit discovery registration and the managed independent-review
+  policy.
+
+### Changed
+- Preserved the Termux-only workflow and Android runtime behavior.
+
+### Fixed
+- None.
+
 ## [0.2.4] - 2026-05-13
 
 ### Added

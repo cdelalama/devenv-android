@@ -1,11 +1,11 @@
-<!-- doc-version: 0.2.4 -->
+<!-- doc-version: 0.2.5 -->
 # Handoff - devenv-android
 
 ## Current Status
 
-- **Last updated**: 2026-05-13 - Claude Opus 4.7 (1M context)
+- Last Updated: 2026-09-12 - GPT-5 Codex
 - **Focus**: Fixed the post-rebrand config-path mismatch so runtime commands use the new `devenv-android` config path with legacy fallback.
-- **Status**: v0.2.4 on `main`
+- **Status**: v0.2.5 on `main`; DocKit registration/policy only, with Android behavior unchanged
 
 ## Immediate Context
 
@@ -53,14 +53,14 @@ falling back to `~/.config/termux-client/config` for existing installs.
 
 ## Current Version
 
-- **devenv-android**: 0.2.4
+- **devenv-android**: 0.2.5
 
-## Top Priorities
+## Open Work — Next Concrete Step
 
-1. Keep the new `devenv`-based mobile entry stable inside the supported Termux runtime
-2. Keep bootstrap/docs aligned with the supported Termux-only workflow
-3. Validate the converged flow on a real Android device
-4. Keep stack-level docs in `home-infra` aligned with any future change here
+1. Validate the converged flow on a real Android device using `bin/op`,
+   `bin/np`, and `install.sh`.
+2. Keep `README.md` and `docs/PROJECT_CONTEXT.md` aligned with any future
+   Termux-only workflow change.
 
 ## Key Decisions
 
