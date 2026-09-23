@@ -1,3 +1,11 @@
+## [0.2.6] - 2026-09-23
+
+### Changed
+- Updated DocKit delivery checks and Opus 5.5 review policy; no runtime deployment.
+
+
+
+
 ## [0.2.5] - 2026-09-12
 
 ### Added

@@ -1,7 +1,12 @@
-<!-- doc-version: 0.2.5 -->
+<!-- doc-version: 0.2.6 -->
 # Handoff - devenv-android
 
 ## Current Status
+
+- Last Updated: 2026-09-23 - Codex (DocKit fleet update).
+- Source tooling: DocKit 4.16.2 adopted; see `docs/llm/DOCKIT_ADOPTION.md`.
+  Existing project work and runtime acceptance remain authoritative below.
+
 
 - Last Updated: 2026-09-12 - GPT-5 Codex
 - **Focus**: Fixed the post-rebrand config-path mismatch so runtime commands use the new `devenv-android` config path with legacy fallback.
