@@ -1,4 +1,4 @@
-<!-- doc-version: 0.2.6 -->
+<!-- doc-version: 0.2.7 -->
 # Versioning Rules - devenv-android
 
 ## Version Format

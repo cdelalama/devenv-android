@@ -1,3 +1,9 @@
+## [0.2.7] - 2026-11-20
+
+### Changed
+
+- Adopt reviewed disposable-runtime lifecycle and advisory receipt validation; runtime unchanged.
+
 ## [0.2.6] - 2026-09-23
 
 ### Changed

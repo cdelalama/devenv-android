@@ -1,4 +1,4 @@
-<!-- doc-version: 0.2.6 -->
+<!-- doc-version: 0.2.7 -->
 # LLM Start Guide - devenv-android
 
 - Last Updated: 2026-09-23 - Codex (DocKit fleet update).
@@ -134,3 +134,19 @@ Recovery must remain available independently of ordinary delivery checks.
 Keep source publication, deployment and actual user acceptance separate. A short
 HANDOFF names the observed result, current blocker and next concrete step.
 <!-- DOCKIT-TEMPLATE:END delivery-evidence -->
+
+<!-- DOCKIT-TEMPLATE:START runtime-lifecycle -->
+### Retire disposable test runtime
+
+Follow docs/RUNTIME_LIFECYCLE.md whenever a task creates disposable runtime.
+Preserve durable evidence outside the container, then retire its exact ID and
+verify disappearance before declaring success. Persist creation intent and run ID;
+reconcile interrupted attempts before retrying. A failed cleanup stops that
+producer. Respect host creation holds and allocation checks before engine writes.
+Debug holds require an owner, reason, finite lease and next action. Record one
+sanitized receipt per run in docs/llm/runtime; none is task-specific with a reason,
+never inferred from missing records. Use scripts/dockit-runtime.py --strict for
+runtime closeout. Do not delete unknown objects, data volumes, images or historical
+snapshots by age. DocKit checks declarations; host reconciliation finds undeclared
+objects. Installing this rule does not install a garbage collector.
+<!-- DOCKIT-TEMPLATE:END runtime-lifecycle -->
